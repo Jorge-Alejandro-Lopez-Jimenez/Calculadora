@@ -1,37 +1,92 @@
 package Calculadora;
 
 public class Unidades {
-   /* 3 métodos */ 
-      public int metrosapulgadas (float valor,int caso ){
-      if (caso==1){
-      float resultado = valor * 39.37f;
-      return resultado;//rsultado en pulgadas
-      }
-      else {
-         float resultado = valor / 39.37f;
-         return resultado;//resultado en metros
-}
+
+   public float conversor(float entrada, int opcion) {
+       switch (opcion) {
+           case 1:
+               return metrosAPulgadas(entrada);
+           case 2:
+               return pulgadasAMetros(entrada);
+           case 3:
+               return metrosAYardas(entrada);
+           case 4:
+               return yardasAMetros(entrada);
+           case 5:
+               return metrosAMillas(entrada);
+           case 6:
+               return millasAMetros(entrada);
+           case 7:
+               return metrosACentimetros(entrada);
+           case 8:
+               return centimetrosAMetros(entrada);
+           case 9:
+               return metrosAKilometros(entrada);
+           case 10:
+               return kilometrosAMetros(entrada);
+           default:
+               return -1; // Opción no válida
+       }
    }
 
-public int metrosayardas (float valor,int caso){//se evalua una variable entera para determinar el caso
-if(caso==1){
-   float resultado = valor * 1.09361f; // Relación de conversión de metros a yardas
-    return resultado;//resultado en yardas
-}
-else {
-   float resultado = valor / 1.09361f; // Relación de conversión de yardas a metros
-    return resultado;//resultado en metros
-}
-}
+   // Método para convertir de metros a pulgadas
+   private float metrosAPulgadas(float valor) {
+       float resultado = valor * 39.37f;
+       return resultado; // Resultado en pulgadas
+   }
 
-public int metrosamillas (float valor, int caso){
-   if(caso==1){
-      float resultado = valor * 0.000621371f; // Relación de conversión de metros a millas
+   // Método para convertir de pulgadas a metros
+   private float pulgadasAMetros(float valor) {
+       float resultado = valor / 39.37f;
+       return resultado; // Resultado en metros
+   }
+
+   //metodo para metros a yardas
+   private float metrosAYardas (float valor) {
+      float resultado = valor * 1.09361f; 
+      return resultado;//resultado en yardas
+   }
+
+   //metodo para yardas a metros
+   private float yardasAMetros (float valor) {
+      float resultado = valor / 1.09361f; 
+    return resultado;//resultado en metros
+   }
+
+   //metodo para metros a millas
+   private float metrosAMillas (float valor) {
+      float resultado = valor * 0.000621371f;
       return resultado;//resultado en millas
    }
-   else {
-      float resultado = valor / 0.000621371f; // Relación de conversión de millas a metros
+
+   //metodo para millas a metros
+   private float millasAMetros (float valor) {
+      float resultado = valor / 0.000621371f;
       return resultado;//resultado en metros
    }
-}
+
+   //metodo para metros a centimetros
+   private float metrosACentimetros (float valor) {
+      float resultado = valor * 100f;
+      return resultado;//resultado en cm
+   }
+
+   //metodo para centimetros a metros
+   private float centimetrosAMetros (float valor) {
+      float resultado = valor / 100f;
+      return resultado;//resultado en metros
+   }
+
+   //metodo para metros a kilometros
+   private float metrosAKilometros (float valor) {
+      float resultado = valor / 1000f;
+      return resultado;//resultado en kilometros
+   }
+
+   //metodo para kilometros a metros
+   private float kilometrosAMetros (float valor) {
+      float resultado = valor * 1000f;
+      return resultado;//resultado en metros
+   }
+   
 }

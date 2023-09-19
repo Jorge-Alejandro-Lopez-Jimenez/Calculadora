@@ -2,27 +2,27 @@ package Calculadora;
 
 public class Unidades {
 
-    public float conversor(float entrada, int opcion) {
+    public float conversor(float entrada, char opcion) {
         switch (opcion) {
-            case 1:
+            case 'a':
                 return metrosAPulgadas(entrada);
-            case 2:
+            case 1:
                 return pulgadasAMetros(entrada);
-            case 3:
+            case 'b':
                 return metrosAYardas(entrada);
-            case 4:
+            case 2:
                 return yardasAMetros(entrada);
-            case 5:
+            case 'c':
                 return metrosAMillas(entrada);
-            case 6:
+            case 3:
                 return millasAMetros(entrada);
-            case 7:
+            case 'd':
                 return metrosACentimetros(entrada);
-            case 8:
+            case 4:
                 return centimetrosAMetros(entrada);
-            case 9:
+            case 'e':
                 return metrosAKilometros(entrada);
-            case 10:
+            case 5:
                 return kilometrosAMetros(entrada);
             default:
                 return -1; // Opción no válida
